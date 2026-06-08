@@ -1,10 +1,5 @@
 algoritmo "Detetive - Misterios de DEVDET"
-//Aluno: Luanny Victória Araújo Saito
-//Ra: 5179127
-//aluno: Maria Clara Fernandes Bartasson
-//Ra: 5180305
-//Alunos: Davi Nascimento Dias
-//Ra: 5179190
+
 var
    // --- Dados do detetive ---
    nomeDetetive : caractere
