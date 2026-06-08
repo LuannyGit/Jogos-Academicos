@@ -1,0 +1,10 @@
+"Pikachu corre muito rápido",
+  "Equipe Rocket está chegando",
+  "Ash grita: Pikachu, ataque!",
+  "James quer capturar Pikachu",
+  "Jessie planeja um ataque",
+  "Prepare-se para a batalha",
+  "Pikachu esquiva dos golpes",
+  "A equipe Rocket não desiste",
+  "Ash e Pikachu são imbatíveis",
+  "Cuidado com o ataque surpresa"

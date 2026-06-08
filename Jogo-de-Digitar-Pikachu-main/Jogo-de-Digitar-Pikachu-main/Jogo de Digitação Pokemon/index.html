@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digitação Pokemon</title>
+  <link rel="icon" type="image/x-icon" href="./pokemons/pic102-removebg-preview.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="pontuacao-topo">Pontuação: <span id="score">0</span></div>
+
+  <div class="game-area">
+    <div class="background">
+      <div class="layer normal"></div>
+      <div class="layer flipped"></div>
+    </div>
+    <div class="chao"></div>
+
+    <!-- Personagens -->
+    <img id="pokeball" src="pokemons/pokebola.gif" alt="Pokébola">
+    <img id="pichu" src="pokemons/pikachu.gif" alt="Pichu">
+    <img id="pikachu" src="pokemons/pikachu.gif" alt="Pikachu" style="display:none;">
+    <img id="equipeRocket" src="pokemons/eguipe_rocked.png" alt="Equipe Rocket" style="display:none;">
+    <img id="gameOverImage" src="pokemons/pokebola_game_over.gif" alt="Game Over" style="display:none;">
+
+    <img id="pokebolaLanca" src="pokemons/pokebola.gif" alt="Pokébola Arremessada" style="display:none;">
+
+  </div>
+
+  <div class="frase-interface">
+    <p id="displayPhrase"></p>
+    <input type="text" id="wordInput" placeholder="Digite aqui..." autofocus />
+    <p id="status"></p>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

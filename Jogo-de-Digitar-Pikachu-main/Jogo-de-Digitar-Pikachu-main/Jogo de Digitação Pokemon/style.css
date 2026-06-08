@@ -1,0 +1,191 @@
+/* Reset e base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #7ad15b;
+}
+
+/* Área do jogo */
+.game-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #a8dd58;
+  z-index: 1;
+  
+}
+
+/* Fundo animado */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  animation: scrollBackground 20s linear infinite;
+  z-index: 0;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.background:not(.fase3) .normal {
+  background-image: url('pokemons/cenario_primeira.gif');
+}
+
+.background:not(.fase3) .flipped {
+  background-image: url('pokemons/cenario_primeira.gif');
+  transform: scaleX(-1);
+}
+
+.background.fase3 .normal,
+.background.fase3 .flipped {
+  background-image: url('pokemons/floresta_2.gif');
+  transform: scaleX(-1);
+}
+
+/* Chão */
+.chao {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 165px;
+  background: #21661ff4;
+  z-index: 1;
+  transition: background 0.5s ease;
+}
+
+.chao.fase2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 165px;
+  background: #5C3A21;
+  z-index: 1;
+  transition: background 0.5s ease;
+}
+
+/* Personagens */
+#pokeball, #pichu, #pikachu, #equipeRocket, #gameOverImage {
+  position: absolute;
+  bottom: 160px;
+  width: 100px;
+  z-index: 2;
+  transition: left 0.3s ease;
+}
+
+#pichu {
+  bottom: 160px;
+}
+
+/* Pontuação */
+.pontuacao-topo {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-size: 22px;
+  z-index: 10;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Frase e entrada */
+.frase-interface {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 500px 500px 0 0;
+  background: linear-gradient(to top, rgba(20, 18, 18, 0.85), rgba(183, 166, 100, 0.7));
+  padding: 2px;
+  color: rgb(249, 248, 248);
+  text-align: center;
+  z-index: 7;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.4);
+}
+
+#displayPhrase {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #c5f6fa;
+}
+
+#wordInput {
+  width: 55%;
+  font-size: 20px;
+  border-radius: 7px;
+  border: 2px solid #ccccb1;
+  background-color: #e5eac3;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#wordInput:focus {
+  outline: none;
+  border-color: #2e3424;
+  box-shadow: 0 0 10px #b1994f;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 24px;
+}
+
+/* Animação do cenário */
+@keyframes scrollBackground {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+/* Animação de pulo do Pikachu */
+@keyframes puloPikachu {
+  0% { bottom: 150px; }
+  30% { bottom: 250px; }
+  60% { bottom: 250px; }
+  100% { bottom: 150px; }
+}
+
+.pulando {
+  animation: puloPikachu 0.6s ease;
+}
+
+@keyframes pokebolaLancar {
+  from {
+    left: -100px;
+    bottom: 150px;
+  }
+  to {
+    left: 740px;
+    bottom: 150px;
+  }
+}
+
+#pokebolaLanca {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  z-index: 3;
+  display: none;
+  bottom: 150px; /* alinhado ao pikachu */
+}
+
+
